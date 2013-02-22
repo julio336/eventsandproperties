@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>EventHandler Test</title> </ head>
+<body>
+	<input name="myInputField" id="myInputField" value="" size="40" /> 
+</body>
+<script>
+//capture the keypress event in javascript and fire
+var textBox = document .getElementById("myInputField"); 
+textBox.onkeypress = function () {
+	Ti.App.fireEvent('webviewEvent' , 
+		{ text: this.value }
+	);
+}; 
+</script> 
+</html>
